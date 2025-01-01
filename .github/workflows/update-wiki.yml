@@ -1,6 +1,7 @@
 name: Update Wiki
 
 on:
+  workflow_dispatch:  # Allows manual triggering of the workflow
   push:
     branches:
       - main
@@ -12,17 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Debug: List repository contents
+      # Step 2: Debug - List repository contents
       - name: List Repository Contents
         run: |
           echo "Repository structure:"
           ls -R
 
-      # Check for the docs folder
+      # Step 3: Verify the presence of the docs folder
       - name: Verify docs Folder
         run: |
           if [ ! -d "docs" ]; then
@@ -30,13 +31,13 @@ jobs:
             exit 0
           fi
 
-      # Set up Git configuration
+      # Step 4: Configure Git settings
       - name: Configure Git
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      # Sync docs folder to the Wiki
+      # Step 5: Sync the docs folder to the Wiki
       - name: Sync docs to Wiki
         run: |
           git clone https://github.com/${{ github.repository }}.wiki.git wiki
