@@ -5,7 +5,7 @@ This project explores how Grasshopper can be used to communicate with the Univer
 
 <img src="https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/Assets/Videos/Vid_RoboticMotion.gif" alt="Alt Text" width="450">
 
-
+ 
 
 ## Key Features
 - **Parametric Design Control**: Use Grasshopper to dynamically adjust polishing paths.
