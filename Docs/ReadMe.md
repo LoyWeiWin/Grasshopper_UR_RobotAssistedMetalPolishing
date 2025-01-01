@@ -3,6 +3,8 @@
 ## Overview
 This project explores how Grasshopper can be used to communnicate with collaborative robot, UR10 for metal polishing tasks, from standard linihisng to complex metal pieces that bolted in an angle.
 
+<img src="https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/Assets/Videos/Vid_RoboticMotion.gif" alt="Alt Text" width="400">
+
 ## Components
 - Universal Robot, UR10 (as example).
 - Robotiq Sanding Kit.
