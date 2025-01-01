@@ -17,12 +17,11 @@ This project explores how Grasshopper can be used to communnicate with collabora
 
 For more details, see the [Wiki](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/wiki).
 
-## Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/robot-.git
-2. Customize the scripts and models to fit your project.
+## Contributing
+We welcome contributions to enhance this project! If you have ideas for improvements or would like to propose changes, feel free to submit a pull request. Alternatively, you can open an issue to discuss your suggestions.
 
+## Acknowledgements
+This project was independently developed as part of my personal initiative and commitment to advancing this field.
 
 ## References
 1. Zhang, Y., & Li, X. (2022). Robotic polishing: A review of recent progress and future perspectives. Robotics and Computer-Integrated Manufacturing, 73, 102234. https://doi.org/10.1016/j.rcim.2021.102234
