@@ -15,7 +15,7 @@ This project explores how Grasshopper can be used to communnicate with collabora
 - `Assets/`: Images, thumbnails and videos
 - `Docs/`: Documentation for installation, setup instructions, usage, and troubleshooting.
 
-For more details, see the [Documentation](./Docs/).
+For more details, see the [Wiki](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/wiki).
 
 ## Getting Started
 1. Clone the repository:
