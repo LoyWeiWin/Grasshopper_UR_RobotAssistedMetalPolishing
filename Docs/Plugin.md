@@ -5,8 +5,6 @@ To enable seamless communication between Grasshopper and Universal Robots (UR), 
 ## 1. **Robot**
 - **Purpose:** Facilitates communication between Grasshopper and Universal Robots (UR), enabling control and simulation.  
 - **Download:** [Robot Plugin](https://github.com/visose/Robots/releases)  
-- **Installation:**
-    a. XX
 
 ## 2. **Generation**
 - **Purpose:** Provides tools for animations and various robotic fabrication purposes.  
