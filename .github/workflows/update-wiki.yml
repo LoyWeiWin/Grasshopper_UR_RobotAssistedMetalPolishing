@@ -3,9 +3,9 @@ name: Update Wiki
 on:
   push:
     branches:
-      - main  # Adjust if using a different branch
+      - main
     paths:
-      - 'Docs/**'  # Trigger only when files in the Docs folder change
+      - 'docs/**'
 
 jobs:
   update-wiki:
@@ -14,6 +14,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      - name: Debug Directory Structure
+        run: |
+          echo "Listing repository contents:"
+          ls -R
 
       - name: Set up Git
         run: |
