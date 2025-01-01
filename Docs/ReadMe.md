@@ -5,6 +5,16 @@ This project explores how Grasshopper can be used to communicate with the Univer
 
 <img src="https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/Assets/Videos/Vid_RoboticMotion.gif" alt="Alt Text" width="400">
 
+
+
+## Key Features
+- **Parametric Design Control**: Use Grasshopper to dynamically adjust polishing paths.
+- **Compatibility with UR10**: Seamless integration with UR collaborative robots for industrial applications.
+- **Flexibility**: Suitable for both standard polishing and complex, angled workpieces.
+- **Customizable Workflow**: Modify and adapt Grasshopper scripts to meet your unique needs.
+
+
+
 ## Repository Structure
 - `GrasshopperFiles/`: Grasshopper scripts.
 - `RhinoFiles/`: Robot workcell, and end-effectors.
