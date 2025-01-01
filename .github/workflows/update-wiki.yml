@@ -12,39 +12,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Debug directory structure
-      - name: Debug: List Repository Contents
+      # Debug: List repository contents
+      - name: List Repository Contents
         run: |
-          echo "Listing repository contents:"
+          echo "Repository structure:"
           ls -R
 
-      # Step 3: Check for docs folder
-      - name: Check for docs Folder
+      # Check for the docs folder
+      - name: Verify docs Folder
         run: |
           if [ ! -d "docs" ]; then
-            echo "docs folder not found, skipping sync."
+            echo "Error: 'docs' folder not found. Skipping sync."
             exit 0
           fi
 
-      # Step 4: Set up Git
-      - name: Set up Git
+      # Set up Git configuration
+      - name: Configure Git
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-      # Step 5: Copy docs to the Wiki
-      - name: Copy docs to Wiki
+      # Sync docs folder to the Wiki
+      - name: Sync docs to Wiki
         run: |
           git clone https://github.com/${{ github.repository }}.wiki.git wiki
           rsync -av --delete docs/ wiki/
           cd wiki
           git add .
           if git diff-index --quiet HEAD; then
-            echo "No changes to commit"
+            echo "No changes to commit."
           else
             git commit -m "Update Wiki from docs folder"
             git push
