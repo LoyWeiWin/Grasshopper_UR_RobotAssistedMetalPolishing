@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'docs/**'
+      - 'Docs/**'
 
 jobs:
   update-wiki:
@@ -15,10 +15,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Debug Directory Structure
+      - name: Debug: List Files in Repository
         run: |
           echo "Listing repository contents:"
           ls -R
+
+      - name: Check for Docs Folder
+        run: |
+          if [ ! -d "Docs" ]; then
+            echo "Docs folder not found, skipping sync."
+            exit 0
+          fi
 
       - name: Set up Git
         run: |
