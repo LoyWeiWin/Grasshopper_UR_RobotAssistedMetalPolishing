@@ -2,23 +2,22 @@
 
 ## Common Issues and Solutions
 
-### 1. Grasshopper Cannot Communicate with Arduino
-- **Problem:** No data received from Arduino.
+### 1. Issues related to Plugins
+- **Problem:** plugins cant be installed to the workstation.
 - **Solution:**
-  1. Verify the correct serial port is set in the Grasshopper script.
-  2. Check if another application is using the serial port.
-  3. Ensure the Arduino sketch is uploaded and running.
+  1. Plugins downloaded from foodforrhino need to be "unblock".
 
-### 2. Serial Port Not Detected
-- **Problem:** The serial port does not appear in the dropdown.
+### 2. Issues related to RobotMesh
+- **Problem:** The robot input is "missing".
 - **Solution:**
-  - Reconnect the Arduino.
-  - Restart Rhino and Grasshopper.
-  - Check the serial port in your system's device manager.
+  - Install the robot config from link to your workstation document folder.
+  - Restart Rhino and Grasshopper. 
 
-### 3. Grasshopper Freezes During Execution
-- **Problem:** Script execution causes Grasshopper to freeze.
+### 3. Issue related to communication channel
+- **Problem:** Cant communicate / remote sent to physical robot.
 - **Solution:**
-  - Reduce data polling frequency in the Arduino sketch.
-  - Test the script with fewer components.
+  - Check the physical robot and workstation are connected through the same internet server. Ping the physical robot (refer to X)
+- **Alt. Solution:**
+  - Connect physical robot and workstation via an ethernet cable. Then, establish a static IP within the teach pendant.
+
 
