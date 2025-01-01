@@ -1,0 +1,37 @@
+name: Update Wiki
+
+on:
+  push:
+    branches:
+      - main  # Adjust if using a different branch
+
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Checkout the Wiki repository
+      - name: Checkout Wiki
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: wiki
+
+      # Step 3: Copy content from `docs` folder to the Wiki
+      - name: Copy Files to Wiki
+        run: |
+          cp -r docs/* wiki/
+
+      # Step 4: Commit and push changes to the Wiki
+      - name: Commit and Push Changes
+        run: |
+          cd wiki
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Auto-update Wiki from repository"
+          git push
