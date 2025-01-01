@@ -2,23 +2,25 @@
 
 ## Common Issues and Solutions
 
-### 1. Grasshopper Cannot Communicate with Arduino
-- **Problem:** No data received from Arduino.
+### 1. Issues Related to Plugins
+- **Problem:** Plugins cannot be installed on the workstation.
 - **Solution:**
-  1. Verify the correct serial port is set in the Grasshopper script.
-  2. Check if another application is using the serial port.
-  3. Ensure the Arduino sketch is uploaded and running.
+  1. Plugins downloaded from FoodForRhino need to be "unblocked."
+  2. Instructions:
+     - Right-click on the zip file (downloaded from FoodForRhino).  
+       <img src="https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/Assets/Images/IMG_PluginIssue_HowTo.png" alt="Access File Properties" title="Access File Properties" width="400">  
+     - Ensure the "Unblock" checkbox is ticked in the file properties.  
+       <img src="https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/Assets/Images/IMG_PluginIssue_HowTo_01.png" alt="Unblock File" title="Unblock File" width="400">
 
-### 2. Serial Port Not Detected
-- **Problem:** The serial port does not appear in the dropdown.
+### 2. Issues Related to RobotMesh
+- **Problem:** The robot input is "missing."
 - **Solution:**
-  - Reconnect the Arduino.
-  - Restart Rhino and Grasshopper.
-  - Check the serial port in your system's device manager.
+  - Install the robot configuration file (provided via the appropriate link) into your workstation's document folder.
+  - Restart Rhino and Grasshopper to apply the changes.
 
-### 3. Grasshopper Freezes During Execution
-- **Problem:** Script execution causes Grasshopper to freeze.
+### 3. Issues Related to the Communication Channel
+- **Problem:** Cannot communicate or send commands to the physical robot.
 - **Solution:**
-  - Reduce data polling frequency in the Arduino sketch.
-  - Test the script with fewer components.
-
+  - Verify that the physical robot and workstation are connected to the same network. Use the "ping" command to test the connection (refer to documentation link X).
+- **Alternative Solution:**
+  - Connect the physical robot and workstation directly using an Ethernet cable. Then, establish a static IP address through the robot's teach pendant.

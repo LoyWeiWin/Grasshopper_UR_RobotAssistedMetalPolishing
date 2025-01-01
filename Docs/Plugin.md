@@ -1,19 +1,17 @@
 # Required Grasshopper Plugins
 
-This project uses the following plugins to facilitate communication between Grasshopper and Arduino:
+To enable seamless communication between Grasshopper and Universal Robots (UR), this project utilizes the following plugins:
 
-## 1. Firefly
-- **Description:** Enables communication between Grasshopper and Arduino via serial port.
-- **Download:** [Firefly](https://www.food4rhino.com/en/app/firefly)
-- **Installation:** Follow the instructions on the Firefly page.
+## 1. **Robot**
+- **Purpose:** Facilitates communication between Grasshopper and Universal Robots (UR), enabling control and simulation.  
+- **Download:** [Robot Plugin](https://github.com/visose/Robots/releases)  
 
-## 2. GHowl
-- **Description:** Facilitates advanced communication protocols, including UDP and OSC.
-- **Download:** [GHowl](https://www.food4rhino.com/en/app/ghowl)
+## 2. **Generation**
+- **Purpose:** Provides tools for animations and various robotic fabrication purposes.  
+- **Download:** [Generation Plugin](https://www.food4rhino.com/en/app/generation)
 
 ### Plugin Configuration
-- Ensure plugins are loaded in Grasshopper's `Libraries` folder.
-- Restart Rhino after installation.
-
-**Note**
-- Detail steps can be seen in this website. https://parametricbydesign.com/grasshopper/tutorials/installing-grasshopper-and-plugins/
+To ensure proper functionality:
+1. Download the plugins and place them in Grasshopper's `Libraries` folder.
+2. Restart Rhino to load the plugins successfully.  
+3. Confirm the plugins are properly installed and accessible in Grasshopper's interface.
