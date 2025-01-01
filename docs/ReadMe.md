@@ -5,7 +5,14 @@ This project explores how Grasshopper can be used to communicate with the Univer
 
 <img src="https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/Assets/Videos/Vid_RoboticMotion.gif" alt="Alt Text" width="450">
 
- 
+## Project
+- Metal Linishing - Planar approach
+- Metal Polishing - Non-planar approach
+
+## Software Requirement
+- Rhino 7 or latest
+- Robot plugin
+- Generation plugin
 
 ## Key Features
 - **Parametric Design Control**: Use Grasshopper to dynamically adjust polishing paths.
