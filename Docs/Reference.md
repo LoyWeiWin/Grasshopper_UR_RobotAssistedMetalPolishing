@@ -7,7 +7,7 @@
 
 ## Tutorials
 - UR Offline Simulator: [YouTube Tutorial](https://www.youtube.com/watch?v=oJGPTRlTMPM)
-- Robot plugin: [Youtube](https://www.youtube.com/watch?v=vAe47zN-d48&list=PLqtxhH1qb3Mw5A_YbvHDfrq4DNNfLtcW-&index=1)
+- Robot plugin: [Youtube Tutorial](https://www.youtube.com/watch?v=vAe47zN-d48&list=PLqtxhH1qb3Mw5A_YbvHDfrq4DNNfLtcW-&index=1)
 
 ## Relevant Research Papers
 1. J. Zhu and H. Hu. (2022). "Real-time human–robot collaboration: A survey," Robotics and Computer-Integrated Manufacturing, 73, 102234. https://doi.org/10.1016/j.rcim.2021.102234.
