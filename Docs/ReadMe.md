@@ -3,25 +3,25 @@
 ## Overview
 This project explores how Grasshopper can be used to communnicate with collaborative robot, UR10 for metal polishing tasks, from standard linihisng to complex metal pieces that bolted in an angle.
 
-## Key Features
-- *software architecture*
-- *optional internet access* 
+## Components
+- Universal Robot, UR10 (as example).
+- Robotiq Sanding Kit.
+- Rhinoceros 3D
+- Grasshopper
 
 ## Repository Structure
 - `GrasshopperFiles/`: Grasshopper scripts.
 - `RhinoFiles/`: Robot workcell, and end-effectors.
-- `HardwareIntegration/`: Wiring diagrams, component details, and setup instructions.
-- `Data/`: Input/output data and logs for testing.
-- `Docs/`: Documentation for installation, usage, and troubleshooting.
+- `Assets/`: Images, thumbnails and videos
+- `Docs/`: Documentation for installation, setup instructions, usage, and troubleshooting.
 
 For more details, see the [Documentation](./Docs/).
 
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/template.git
-2. Replace placeholder files (e.g., `.gitkeep`) with your project files.
-3. Customize the scripts and models to fit your project.
+   git clone https://github.com/username/robot-.git
+2. Customize the scripts and models to fit your project.
 
 
 ## References
