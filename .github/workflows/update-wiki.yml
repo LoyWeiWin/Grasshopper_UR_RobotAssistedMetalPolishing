@@ -5,43 +5,48 @@ on:
     branches:
       - main
     paths:
-      - 'Docs/**'
+      - 'docs/**'
 
 jobs:
   update-wiki:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Debug: List Files in Repository
+      # Step 2: Debug directory structure
+      - name: Debug: List Repository Contents
         run: |
           echo "Listing repository contents:"
           ls -R
 
-      - name: Check for Docs Folder
+      # Step 3: Check for docs folder
+      - name: Check for docs Folder
         run: |
-          if [ ! -d "Docs" ]; then
-            echo "Docs folder not found, skipping sync."
+          if [ ! -d "docs" ]; then
+            echo "docs folder not found, skipping sync."
             exit 0
           fi
 
+      # Step 4: Set up Git
       - name: Set up Git
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-      - name: Copy Docs to Wiki
+      # Step 5: Copy docs to the Wiki
+      - name: Copy docs to Wiki
         run: |
           git clone https://github.com/${{ github.repository }}.wiki.git wiki
-          rsync -av --delete Docs/ wiki/
+          rsync -av --delete docs/ wiki/
           cd wiki
           git add .
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
-            git commit -m "Update Wiki from Docs folder"
+            git commit -m "Update Wiki from docs folder"
             git push
           fi
         env:
