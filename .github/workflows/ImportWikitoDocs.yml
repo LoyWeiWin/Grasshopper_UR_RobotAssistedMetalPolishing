@@ -22,8 +22,8 @@ jobs:
       # Step 3: Copy Wiki files to the docs folder
       - name: Sync Wiki to Docs
         run: |
-          mkdir -p docs
-          rsync -av --delete wiki/ docs/
+          mkdir -p Docs
+          rsync -av --delete wiki/ Docs/
 
       # Step 4: Commit and push updates to the main repository
       - name: Commit and Push Changes
