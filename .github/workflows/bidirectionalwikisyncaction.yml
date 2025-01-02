@@ -3,11 +3,11 @@ name: Documentation
 on:
   push:
     branches:
-      - develop
+      - main
     paths:
-      - "docs/**"
+      - "Docs/**"
   repository_dispatch:
-    types: [docs]
+    types: [Docs]
   gollum:
 
 env:
@@ -24,7 +24,7 @@ jobs:
       - name: Sync docs to wiki
         uses: newrelic/wiki-sync-action@main
         with:
-          source: docs
+          source: Docs
           destination: wiki
           token: ${{ secrets.NEWRELIC_BOT_TOKEN }}
           gitAuthorName: ${{ env.GIT_AUTHOR_NAME }}
@@ -48,3 +48,24 @@ jobs:
           gitAuthorName: ${{ env.GIT_AUTHOR_NAME }}
           gitAuthorEmail: ${{ env.GIT_AUTHOR_EMAIL }}
           branch: develop # since default branch is develop in this example
+
+- name: Bi-directional Wiki Sync Action
+  # You may pin to the exact commit or the version.
+  # uses: newrelic/wiki-sync-action@dbf2a9603687e77ad8b5be714fa6dd055183508b
+  uses: newrelic/wiki-sync-action@v1.0.1
+  with:
+    # Source directory/location of file sync (ex: `docs`).
+    source: 
+    # Destination directory/location for file sync (ex: `wiki`).
+    destination: 
+    # Github personal access token with at least 'repo' authorization.
+    token: 
+    # Author name to use for committing to repository. Default: `github.actor`
+    gitAuthorName: # optional, default is ${{ github.actor }}
+    # Author name to use for committing to repository. Default: `github.actor@users.noreply.github.com
+    gitAuthorEmail: # optional
+    # Default branch to commit to. Default: `master`
+    branch: # optional, default is master
+    # Message for committing files to repository.
+    commitMessage: # optional
+          
