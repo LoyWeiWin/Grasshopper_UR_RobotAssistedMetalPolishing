@@ -19,7 +19,7 @@ jobs:
         run: |
           git clone https://github.com/${{ github.repository }}.wiki.git wiki
 
-      # Step 3: Copy Wiki files to the docs folder
+      # Step 3: Copy Wiki files to the Docs folder
       - name: Sync Wiki to Docs
         run: |
           mkdir -p Docs
@@ -28,11 +28,11 @@ jobs:
       # Step 4: Commit and push updates to the main repository
       - name: Commit and Push Changes
         run: |
-          git add docs/
+          git add Docs/
           if git diff --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Sync Wiki to docs folder"
+            git commit -m "Sync Wiki to Docs folder"
             git push
           fi
         env:
