@@ -1,4 +1,4 @@
-name: ImportWiking
+name: Import Wiki to Docs
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the main repository
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
@@ -18,7 +18,7 @@ jobs:
       - name: Clone Wiki
         run: git clone https://github.com/${{ github.repository }}.wiki.git wiki
 
-      # Step 3: Sync Wiki to Docs (retain README.md)
+      # Step 3: Sync Wiki to Docs while retaining README.md
       - name: Sync Wiki to Docs
         run: |
           mkdir -p Docs
@@ -40,5 +40,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add Docs/
-          git commit -m "Force sync Wiki to Docs folder while retaining README.md" || echo "No changes to commit."
+          git commit -m "Sync Wiki to Docs folder while retaining README.md" || echo "No changes to commit."
           git push https://${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
