@@ -1,4 +1,4 @@
-name: Import Wiki to Docs
+name: ImportWiki
 
 on:
   workflow_dispatch:
