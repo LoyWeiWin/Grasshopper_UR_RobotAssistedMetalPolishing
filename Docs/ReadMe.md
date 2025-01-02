@@ -16,7 +16,7 @@ This project explores how Grasshopper can be used to communicate with the Univer
 
 ## Key Features
 - **Parametric Design Control**: Use Grasshopper to dynamically adjust polishing paths.
-- **Compatibility with UR10**: Seamless integration with UR collaborative robots for industrial applications.
+- **Compatibility with Universal Robot**: Seamless integration with UR collaborative robots for industrial applications.
 - **Flexibility**: Suitable for both standard polishing and complex, angled workpieces.
 - **Customizable Workflow**: Modify and adapt Grasshopper scripts to meet your unique needs.
 
