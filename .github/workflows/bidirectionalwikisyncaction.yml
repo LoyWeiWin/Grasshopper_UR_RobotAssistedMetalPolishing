@@ -51,20 +51,20 @@ jobs:
 
   # You may pin to the exact commit or the version.
   # uses: newrelic/wiki-sync-action@dbf2a9603687e77ad8b5be714fa6dd055183508b
-  uses: newrelic/wiki-sync-action@v1.0.1
-  with:
+  #uses: newrelic/wiki-sync-action@v1.0.1
+  #with:
     # Source directory/location of file sync (ex: `docs`).
-    source: 
+    #source: 
     # Destination directory/location for file sync (ex: `wiki`).
-    destination: 
+    #destination: 
     # Github personal access token with at least 'repo' authorization.
-    token: 
+    #token: 
     # Author name to use for committing to repository. Default: `github.actor`
-    gitAuthorName: # optional, default is ${{ github.actor }}
+    #gitAuthorName: # optional, default is ${{ github.actor }}
     # Author name to use for committing to repository. Default: `github.actor@users.noreply.github.com
-    gitAuthorEmail: # optional
+    #gitAuthorEmail: # optional
     # Default branch to commit to. Default: `master`
-    branch: # optional, default is master
+    #branch: # optional, default is master
     # Message for committing files to repository.
-    commitMessage: # optional
+    # commitMessage: # optional
           
