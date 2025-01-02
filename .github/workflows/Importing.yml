@@ -1,4 +1,4 @@
-name: ImportWiki
+name: ImportWiking
 
 on:
   workflow_dispatch:
@@ -22,7 +22,6 @@ jobs:
       - name: Sync Wiki to Docs
         run: |
           mkdir -p Docs
-          rsync -av --delete wiki/ Docs/
           if [ -f Docs/README.md ]; then
             cp Docs/README.md Docs/README.md.bak
           fi
@@ -31,11 +30,15 @@ jobs:
             mv Docs/README.md.bak Docs/README.md
           fi
 
-      # Step 4: Commit and Push Changes
-      - name: Force Commit and Push Changes
+      # Step 4: Configure Git Author
+      - name: Configure Git Author
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+
+      # Step 5: Commit and Push Changes
+      - name: Commit and Push Changes
         run: |
           git add Docs/
           git commit -m "Force sync Wiki to Docs folder while retaining README.md" || echo "No changes to commit."
-          git push
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          git push https://${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
