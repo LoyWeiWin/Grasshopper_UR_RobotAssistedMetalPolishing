@@ -1,9 +1,9 @@
 name: Import Wiki to Docs
 
 on:
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight (optional)
+    - cron: '0 0 * * *'
 
 jobs:
   import-wiki:
@@ -16,24 +16,26 @@ jobs:
 
       # Step 2: Clone the Wiki repository
       - name: Clone Wiki
-        run: |
-          git clone https://github.com/${{ github.repository }}.wiki.git wiki
+        run: git clone https://github.com/${{ github.repository }}.wiki.git wiki
 
-      # Step 3: Copy Wiki files to the Docs folder
+      # Step 3: Sync Wiki to Docs (retain README.md)
       - name: Sync Wiki to Docs
         run: |
           mkdir -p Docs
           rsync -av --delete wiki/ Docs/
+          if [ -f Docs/README.md ]; then
+            cp Docs/README.md Docs/README.md.bak
+          fi
+          rsync -av --delete wiki/ Docs/
+          if [ -f Docs/README.md.bak ]; then
+            mv Docs/README.md.bak Docs/README.md
+          fi
 
-      # Step 4: Commit and push updates to the main repository
-      - name: Commit and Push Changes
+      # Step 4: Commit and Push Changes
+      - name: Force Commit and Push Changes
         run: |
           git add Docs/
-          if git diff --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Sync Wiki to Docs folder"
-            git push
-          fi
+          git commit -m "Force sync Wiki to Docs folder while retaining README.md" || echo "No changes to commit."
+          git push
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
