@@ -33,8 +33,16 @@ For more details, see the [Wiki](https://github.com/LoyWeiWin/Grasshopper_UR_Rob
 ## Contributing
 Contributions to improve this workflow are welcome! Please follow the contributing guidelines in the [contributing guidelines](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/wiki/05_Contributing-Guidelines) in wiki.
 
+## Code of Conduct
+This project follows the Contributor Covenant Code of Conduct. Please read our [Code of Conduct](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/CODE_OF_CONDUCT.md) before contributing.
+
+> [!WARNING]  
+> If you are unfamiliar with using cobots (collaborative robots), please ensure you have supervision from a qualified advisor or professional. Alternatively, simulate your intended workflow in a Grasshopper environment before working with physical machines.
+> The contributor or owner of this repository is not responsible for any physical damage, injury, or harm caused to the immediate environment or individuals due to improper usage of cobots or related tools.
+
 ## Acknowledgements
 This project was independently developed as part of my personal initiative and commitment to advancing this field.
+
 
 ## References
 1. Zhang, Y., & Li, X. (2022). Robotic polishing: A review of recent progress and future perspectives. Robotics and Computer-Integrated Manufacturing, 73, 102234. https://doi.org/10.1016/j.rcim.2021.102234
