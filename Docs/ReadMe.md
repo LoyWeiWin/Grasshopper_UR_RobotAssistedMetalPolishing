@@ -31,7 +31,7 @@ This project explores how Grasshopper can be used to communicate with the Univer
 For more details, see the [Wiki](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/wiki).
 
 ## Contributing
-Contributions to improve this workflow are welcome! Please follow the contributing guidelines in the [contributing guidelines](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/wiki/05_Contributing-Guidelines) in wiki.
+Contributions to improve this workflow are welcome! Please follow the contributing guidelines in the [contributing guidelines](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/wiki/06_Contributing-Guidelines) in wiki.
 
 ## Code of Conduct
 This project follows the Contributor Covenant Code of Conduct. Please read our [Code of Conduct](https://github.com/LoyWeiWin/Grasshopper_UR_RobotAssistedMetalPolishing/blob/main/CODE_OF_CONDUCT.md) before contributing.
